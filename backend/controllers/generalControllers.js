@@ -1,8 +1,8 @@
 import asyncHandler from 'express-async-handler';
 
-import User from '../models/userModel';
+import User from '../models/userModel.js';
 
-export const getUserById = asyncHandler(async (req, res) => {
+export const getUser = asyncHandler(async (req, res) => {
   try {
     const { id } = req.params;
 
