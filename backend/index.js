@@ -39,7 +39,7 @@ app.use(notFoundRoute);
 app.use(errorHandler);
 
 // SERVER
-const PORT = process.env.PORT || 9000;
+const PORT = process.env.PORT || 5001;
 const NODE_ENV = process.env.NODE_ENV;
 
 app.listen(
