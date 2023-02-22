@@ -12,6 +12,7 @@ import clientRoutes from './routes/clientRoutes.js';
 import generalRoutes from './routes/generalRoutes.js';
 import managementRoutes from './routes/managementRoutes.js';
 import salesRoutes from './routes/salesRoutes.js';
+import { errorHandler, notFoundRoute } from './middleware/errorMiddleware.js';
 
 // CONFIGURATION
 dotenv.config();
@@ -32,6 +33,10 @@ app.use('/api/client', clientRoutes);
 app.use('/api/general', generalRoutes);
 app.use('/api/management', managementRoutes);
 app.use('/api/sales', salesRoutes);
+
+// GLOBAL MIDDLEWARE
+app.use(notFoundRoute);
+app.use(errorHandler);
 
 // SERVER
 const PORT = process.env.PORT || 9000;
