@@ -23,7 +23,7 @@ const userSchema = new mongoose.Schema(
     state: String,
     occupation: String,
     phoneNumber: String,
-    transaction: Array,
+    transactions: Array,
     role: {
       type: String,
       enum: ['user', 'admin', 'superadmin'],
