@@ -7,7 +7,6 @@ import Header from 'components/Header';
 const Customers = () => {
   const theme = useTheme();
   const { data, isLoading } = useGetCustomersQuery();
-  console.log('🚀 ~ file: Customers.jsx:10 ~ Customers ~ data:', data);
 
   const columns = [
     {
