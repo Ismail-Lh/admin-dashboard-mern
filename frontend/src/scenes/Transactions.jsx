@@ -9,7 +9,7 @@ import DataGridCustomToolbar from 'components/DataGridCustomToolbar';
 const Transactions = () => {
   const theme = useTheme();
 
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState('');
@@ -88,7 +88,7 @@ const Transactions = () => {
           getRowId={row => row._id}
           rows={(data && data.transactions) || []}
           columns={columns}
-          rowCount={(data && data.total) || 0}
+          rowCount={(data && data.totalTransactionsNum) || 0}
           rowsPerPageOptions={[20, 50, 100]}
           pagination
           page={page}
