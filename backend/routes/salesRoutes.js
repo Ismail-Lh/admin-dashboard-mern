@@ -1,9 +1,9 @@
 import express from 'express';
 
-import { getOverallSalesStat } from '../controllers/salesControllers';
+import { getOverallSales } from '../controllers/salesControllers.js';
 
 const router = express.Router();
 
-router.route('/').get(getOverallSalesStat);
+router.route('/').get(getOverallSales);
 
 export default router;
