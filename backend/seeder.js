@@ -10,6 +10,7 @@ import {
   dataProductStat,
   dataTransaction,
   dataOverallStat,
+  dataAffiliateStat,
 } from './data/index.js';
 
 import User from './models/userModel.js';
@@ -17,6 +18,7 @@ import ProductState from './models/productStateModel.js';
 import Product from './models/productModel.js';
 import Transaction from './models/transactionModel.js';
 import OverAllStat from './models/overallStatModel.js';
+import AffiliateStat from './models/affiliateStatModel.js';
 
 dotenv.config();
 
@@ -28,13 +30,15 @@ const importData = async () => {
     // await Product.deleteMany();
     // await ProductState.deleteMany();
     // await Transaction.deleteMany();
-    await OverAllStat.deleteMany();
+    // await OverAllStat.deleteMany();
+    await AffiliateStat.deleteMany();
 
     // await User.insertMany(dataUser);
     // await Product.insertMany(dataProduct);
     // await ProductState.insertMany(dataProductStat);
     // await Transaction.insertMany(dataTransaction);
-    await OverAllStat.insertMany(dataOverallStat);
+    // await OverAllStat.insertMany(dataOverallStat);
+    await AffiliateStat.insertMany(dataAffiliateStat);
 
     console.log('Data imported!'.green.inverse);
     process.exit();
@@ -51,6 +55,7 @@ const deleteData = async () => {
     await ProductState.deleteMany();
     await Transaction.deleteMany();
     await OverAllStat.deleteMany();
+    await AffiliateStat.deleteMany();
 
     console.log('Data deleted!'.red.inverse);
     process.exit();
