@@ -1,3 +1,5 @@
+import asyncHandler from 'express-async-handler';
+
 import User from '../models/userModel.js';
 
 // *@desc Get all admins

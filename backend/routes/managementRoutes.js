@@ -1,6 +1,6 @@
 import express from 'express';
 
-import { getAdmins } from '../controllers/managementControllers';
+import { getAdmins } from '../controllers/managementControllers.js';
 
 const router = express.Router();
 
